@@ -3,6 +3,6 @@ $(document).ready(function(){
 		$('#notice_wrapper').fadeOut("slow", function() {
 			$(this).remove();
 		})
-	}, 1000);
+	}, 2000);
 
 });

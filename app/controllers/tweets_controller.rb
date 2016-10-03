@@ -9,7 +9,7 @@ class TweetsController < ApplicationController
   	@tweet = Tweet.new(tweet_params)
   	@tweet.user_id = current_user.id
   	if @tweet.save
-      redirect_to root_path
+      redirect_to new_tweet_path, notice: "Your tweet has been successfully posted"
     else
       render 'new'
     end
