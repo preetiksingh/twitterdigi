@@ -1,4 +1,6 @@
 class TweetsController < ApplicationController
+  before_action :only_logged_in_users, only: [:new]
+  
   def new
   	@tweet = Tweet.new
   end
@@ -17,4 +19,10 @@ class TweetsController < ApplicationController
   def tweet_params
     params.require(:tweet).permit(:tweet, :user_id)
   end
+
+  def only_logged_in_users
+    unless current_user
+      redirect_to root_path, notice: "Please login"
+   end
+ end
 end
