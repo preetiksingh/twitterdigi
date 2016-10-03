@@ -51,13 +51,15 @@ gem 'omniauth-twitter', '~> 1.0.1'
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'font-awesome-sass'
 
-# Use sqlite3 as the database for Active Record
+# Use postgres  as the database for Active Record
+gem 'pg'
+
 group :development, :test do
-	gem 'sqlite3'
+	gem 'dotenv-rails'
 end
 
 group :production, :test do
-	gem 'pg'
+
 	gem 'rails_12factor'
 end
 
