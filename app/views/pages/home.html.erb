@@ -1,4 +1,6 @@
 <div class="wrapper">
 	<div class="overlay"></div>
-    <%= link_to 'Sign in with Twitter', '/auth/twitter', class:"button" %>
+	<%= link_to('/auth/twitter',class:"button") do %>
+	<span><%= icon('twitter') %> Sign In with Twitter </span>
+	<% end %>
 </div>
